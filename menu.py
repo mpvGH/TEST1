@@ -36,6 +36,7 @@ def reg_trabajador():
     print('Has elegido la opción 1')
     input()
     #CAMBIO CUALQUIERA
+    #BLABLA
 
 
 def listar_trabajador():
