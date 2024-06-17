@@ -35,6 +35,7 @@ def ejecutar_opcion(opcion, opciones):
 def reg_trabajador():
     print('Has elegido la opción 1')
     input()
+    #CAMBIO CUALQUIERA
 
 
 def listar_trabajador():
