@@ -1,4 +1,5 @@
 from os import system
+lista_trabajador = []
 def menu_principal():
     opciones = {
         '1': ('Opción 1', reg_trabajador),
@@ -33,14 +34,26 @@ def ejecutar_opcion(opcion, opciones):
 
 
 def reg_trabajador():
+    # Para registrar un trabajador se requiere los siguiente: Nombre y Apellido, Cargo, Sueldo bruto.
+    # desc.salud 7%, desc. afp 12%, líquido = restante
     print('Has elegido la opción 1')
-    input()
+    dic_reg_trabajador = {}
+    dic_reg_trabajador['nombre'] = input("Ingrese el nombre y apellido del usuario.")
+    dic_reg_trabajador['cargo'] = input("Ingrese el cargo del usuario.")
+    dic_reg_trabajador['sueldo'] = input("Ingrese el sueldo del usuario")
+    dic_reg_trabajador['desc_salud'] = float(dic_reg_trabajador['sueldo'])/100*7
+    dic_reg_trabajador['desc_afp'] = float(dic_reg_trabajador['sueldo'])/100*12
+    dic_reg_trabajador['liquido'] = float(dic_reg_trabajador['sueldo'])-dic_reg_trabajador['desc_salud']-dic_reg_trabajador['desc_afp']
+    lista_trabajador.append(dic_reg_trabajador)
+
     #CAMBIO CUALQUIERA
     #BLABLA
 
 
 def listar_trabajador():
     print('Has elegido la opción 2')
+    for i in lista_trabajador:
+        print(i)
     input()
 
 
